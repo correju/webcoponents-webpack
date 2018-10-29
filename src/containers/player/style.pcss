@@ -1,0 +1,69 @@
+.player-outer-box {
+  border: 1px solid #939393;
+  height: 50px;
+  width: 100%;
+}
+
+.play-icon,
+.stop-icon {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  border-color: transparent;
+}
+
+.play-icon > svg,
+.stop-icon > svg {
+  width: 100%;
+  height: auto;
+}
+
+.wave-container,
+.button-container {
+  height: 100%;
+}
+
+.button-container {
+  float: left;
+  width: 60px;
+}
+
+.wave-container {
+  float: left;
+  width: calc(100% - 72px);
+  height: calc(100% - 12px);
+  margin: 5px;
+  background-color: #A0A4A5;
+  position: relative;
+}
+
+.wave-container.short {
+  width: calc(100% - 208px);
+  border-right: 1px solid #CCC;
+}
+
+.progress {
+  position: absolute;
+  height: 100%;
+  width: 0;
+  z-index: 1;
+  background: #E67D21;
+}
+
+.wave {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: absolute;
+}
+
+.hide {
+  display: none;
+}
+
+.talent-border {
+  width: 100%;
+  height: 4px;
+}
