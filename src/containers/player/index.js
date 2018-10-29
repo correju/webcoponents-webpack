@@ -4,7 +4,7 @@ import {PolymerElement, html} from '@polymer/polymer/polymer-element';
 import css from './style.pcss';
 import template from './template.html';
 
-export default class test extends PolymerElement {
+export default class Player extends PolymerElement {
   constructor() {
     super();
     const shadowRoot = this.attachShadow({mode: 'open'});
@@ -16,11 +16,6 @@ export default class test extends PolymerElement {
       shadowRoot.querySelector('.play-icon').addEventListener('click', this.play);
       shadowRoot.querySelector('.stop-icon').addEventListener('click', this.stop);
       document.addEventListener('stop-all', this.checkToStop);
-      if (this.hasChildNodes()) {
-        shadowRoot.querySelector('.wave-container').classList.add("short");
-        shadowRoot.querySelector('slot').classList.remove("hide");
-        shadowRoot.querySelector('.wave-container').classList.remove("right-border");
-      }
   }
   _checkToStop (ev) {
     if (this.shadowRoot !== ev.detail) {
@@ -72,4 +67,4 @@ export default class test extends PolymerElement {
   }
 }
 
-window.customElements.define('my-player', test);
+window.customElements.define('my-player', Player);
